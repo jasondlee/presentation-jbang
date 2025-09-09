@@ -55,19 +55,19 @@ https://jasondl.ee - jason@steeplesoft.com
 ---
 ## Installation
 
-###  Manual Install
+###  [~]Manual Install
 - [~] Unzip the [latest binary release](https://github.com/jbangdev/jbang/releases/latest)
-- [~] Add `jbang-<version>/bin` to your $PATH 
+- [~] Add `jbang-<version>/bin` to your `$PATH` 
 
 ---
 ## Installation (cont)
 
-###  Using Package Managers
-- JBang: <br>`curl -Ls https://sh.jbang.dev | bash -s - app setup`
-- JBang (Windows): <br>`iex "& { $(iwr -useb https://ps.jbang.dev) } app setup"`
-- SDKMAN!: `sdk install jbang`
-- Homebrew: `brew install jbang`
-- Others: RPM, Docker, Chocolatey, Scoop, NPM, PIP
+### [~]Using Package Managers
+- [~]JBang: <br>`curl -Ls https://sh.jbang.dev | bash -s - app setup`
+- [~]JBang (Windows): <br>`iex "& { $(iwr -useb https://ps.jbang.dev) } app setup"`
+- [~]SDKMAN!: `sdk install jbang`
+- [~]Homebrew: `brew install jbang`
+- [~]Others: RPM, Docker, Chocolatey, Scoop, NPM, PIP
 
 ---
 ## Your First Script
@@ -82,7 +82,7 @@ Hello World!
 ---
 ### Generated Code
 
-```java[1|3|5|6-8]
+```java
 ///usr/bin/env jbang "$0" "$@" ; exit $?
 
 import static java.lang.System.*;
@@ -93,17 +93,6 @@ public class demo {
     }
 }
 ```
-
----
-## A "Real" Script
-
-- [~] Maven Central search
-- [~] Search for a variety of parameters
-  - [~] Class name
-  - [~] Fully-qualified class name
-  - [~] Group ID
-  - [~] Artifact ID
-- [~] Specify number of rows to display
 
 ---
 ## JBang Templates
@@ -121,6 +110,18 @@ JBang comes with a number of templates that you can use to get started quickly.
 
 ---
 ## Introducing mvnsrch
+
+- [~] Maven Central search
+- [~] Search via a variety of parameters
+  - [~] Class name
+  - [~] Fully qualified class name
+  - [~] Group ID
+  - [~] Artifact ID
+- [~] Specify number of rows to display
+- [~] Pagination would be nice to have
+
+---
+## Creating the script
 
 ```shell
 $ jbang -t cli mvnsrch.java
@@ -178,7 +179,9 @@ $ jbang edit -b mvnsrch.java
 - [~]_Can_ be remote, but make sure you trust the source!
 - [~]`jbang catalog list`
 - [~]`jbang catalog add [--name <name>] <url>`
-- [~]`jbang alias list <catalog>`
+- [~]`jbang alias list <name>`
+- [~]`jbang <alias>@<catalog>`
+- [~][My Catalog](https://raw.githubusercontent.com/jasondlee/jbang-catalog/master/jbang-catalog.json)
 
 ---
 ### JBang Summary
